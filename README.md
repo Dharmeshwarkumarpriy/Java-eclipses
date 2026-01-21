@@ -1,1 +1,1 @@
-# Java-eclipses
+# Java-eclipses project.
