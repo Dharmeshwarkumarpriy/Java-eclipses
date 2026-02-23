@@ -25,7 +25,7 @@ public class Test {
 		Course course1=con.getBean("oc",Course.class);
 		System.out.println(course1.hashCode());
 		
-		System.out.println("+++++++ teacher scope use +++++++++");
+		System.out.println("+++++++ teacher scope use XML +++++++++");
 		Teacher t1= con.getBean("teacher",Teacher.class);
 		System.out.println(t1);
 		System.out.println(t1.hashCode());
