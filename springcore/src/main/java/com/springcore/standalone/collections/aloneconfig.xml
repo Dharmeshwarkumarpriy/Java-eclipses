@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xmlns:context="http://www.springframework.org/schema/constext"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd
+	">
+
+	<!-- standalone list -->
+	<util:list list-class="java.util.LinkedList" id="mybestfriends">
+		<value>aman</value>
+		<value>raman</value>
+		<value>ankit</value>
+		<value>rohit</value>
+
+	</util:list>
+
+	<!-- standalone Map -->
+	<util:map map-class="java.util.HashMap" id="fees">
+		<entry key="Spring Framework" value="8000" />
+		<entry key="Djongo Framework" value="5000" />
+		<entry key="Hibernate Framework" value="3000" />
+
+	</util:map>
+
+	<!-- standalone properties -->
+	<util:properties id="dbconfig">
+		<prop key="driver">com.mysql.jdbc.Driver</prop>
+		<prop key="uername">dharmy</prop>
+		<prop key="password">qwe</prop>
+		<prop key="url">mysql:jdbc://localhost:3306/database</prop>
+	</util:properties>
+	
+	<!-- standalone Tree -->
+	<util:map map-class="java.util.TreeMap" id="tree">
+		<entry key="Spring Framework" value="8000" />
+		<entry key="Djongo Framework" value="5000" />
+		<entry key="Hibernate Framework" value="3000" />
+
+	</util:map>
+	
+	<!-- standalone vater -->
+	<util:list list-class="java.util.Vector" id="dost">
+		<value>aman</value>
+		<value>raman</value>
+		<value>ankit</value>
+		<value>rohit</value>
+
+	</util:list>
+
+	<!-- this is our beans -->
+	<bean class="com.springcore.standalone.collections.Person"
+		name="person1">
+		<!-- <property name="friends" > -->
+		<!-- <ref bean="mybestfriends" /> -->
+		<!-- </property> -->
+
+
+		<property name="friends" ref="mybestfriends" />
+		<property name="feestructure" ref="fees" />
+		<property name="properties" ref="dbconfig" />
+		<property name="trees" ref="tree" />
+		<property name="dosts" ref="dost" />
+	</bean>
+
+	<bean class="com.springcore.standalone.collections.Person"
+		name="person2">
+		<property name="friends">
+			<ref bean="mybestfriends" />
+		</property>
+	</bean>
+
+
+	<!-- <bean class="com.springcore.springcore.Student" name="student3" -->
+	<!-- p:studentId="4113" p:studentName="dabalu" p:studentAddress="rachi"/> -->
+
+
+
+</beans>
