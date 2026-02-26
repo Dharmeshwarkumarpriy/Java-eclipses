@@ -22,6 +22,13 @@ int r = this.jdbcTemplate.update(query,student.getId(),student.getName(),student
 		return r;
 	}
 
+	public int delete(int studentId) {
+		// delete operation....
+		String query="delete from student where id=?";
+		int r = this.jdbcTemplate.update(query,studentId);			
+		return r;
+	}
+	
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -29,8 +36,6 @@ int r = this.jdbcTemplate.update(query,student.getId(),student.getName(),student
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
-
-
 
 	
 
