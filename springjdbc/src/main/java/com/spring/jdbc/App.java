@@ -24,7 +24,7 @@ public class App {
 		
 		StudentDao studentDao = context.getBean("studentDao",StudentDao.class);
 //		// INSERT....
-		Student student=new Student();
+//		Student student=new Student();
 //		student.setId(5656);
 //		student.setName("priye");
 //		student.setCity("rohtas");
@@ -40,9 +40,13 @@ public class App {
 //		int result = studentDao.change(student);
 //		System.out.println("data changed: "+result);
 //		
-		// DELETE....
-		int result = studentDao.delete(45);
-		System.out.println("deleted: "+result);
+//		// DELETE....
+//		int result = studentDao.delete(45);
+//		System.out.println("deleted: "+result);
+//		
+		// SELECT....	
+		Student student = studentDao.getStudent(458);
+		System.out.println(student);
 		
 	}
 }
