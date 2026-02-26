@@ -1,5 +1,7 @@
 package com.spring.jdbc.dao;
 
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -38,6 +40,13 @@ int r = this.jdbcTemplate.update(query,student.getId(),student.getName(),student
 		return student;
 	}
 	
+	public List<Student> getAllStudents() {
+		// selecting multiple student....
+		String query="select * from student";
+		List<Student> students = this.jdbcTemplate.query(query, new RowMapperImpl());
+		return students;
+	}
+	
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -45,6 +54,8 @@ int r = this.jdbcTemplate.update(query,student.getId(),student.getName(),student
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
+
+	
 
 	
 
