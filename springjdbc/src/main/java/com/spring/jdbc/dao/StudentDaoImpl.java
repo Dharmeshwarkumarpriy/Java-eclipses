@@ -12,7 +12,7 @@ import com.spring.jdbc.enties.Student;
 @Component("studentDao")
 public class StudentDaoImpl implements StudentDao {
 
-	@Autowired
+//	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	public int insert(Student student) {
@@ -55,6 +55,7 @@ int r = this.jdbcTemplate.update(query,student.getId(),student.getName(),student
 		return jdbcTemplate;
 	}
 
+	@Autowired
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
