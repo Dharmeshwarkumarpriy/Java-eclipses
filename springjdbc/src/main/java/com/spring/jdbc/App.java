@@ -29,38 +29,38 @@ public class App {
 
 		
 		StudentDao studentDao = context.getBean("studentDao",StudentDao.class);
-		// INSERT....
-		Student student=new Student();
-		student.setId(5554);
-		student.setName("raj kumar");
-		student.setCity("tumba");
-		
-		int result = studentDao.insert(student);
-		System.out.println("student added: " + result);
-		System.out.println("++++++++++++++");
-		
-		
-//		// UPDATE....
+//		// INSERT....
 //		Student student=new Student();
-//		student.setId(434);
+//		student.setId(5554);
 //		student.setName("raj kumar");
 //		student.setCity("tumba");
-//		int result = studentDao.change(student);
-//		System.out.println("data changed: "+result);
-
-		
-		// DELETE....
-		int resultD = studentDao.delete(4554);
-		System.out.println("deleted: "+resultD);
-		System.out.println("++++++++++++++");
-		
-		
-		// SELECT SINGLE OBJECT....	
-		Student student1 = studentDao.getStudent(458);
-		System.out.println("single object: "+student1);
-		System.out.println("++++++++++++++");
-		
-		
+//		
+//		int result = studentDao.insert(student);
+//		System.out.println("student added: " + result);
+//		System.out.println("++++++++++++++");
+//		
+//		
+////		// UPDATE....
+////		Student student=new Student();
+////		student.setId(434);
+////		student.setName("raj kumar");
+////		student.setCity("tumba");
+////		int result = studentDao.change(student);
+////		System.out.println("data changed: "+result);
+//
+//		
+//		// DELETE....
+//		int resultD = studentDao.delete(4554);
+//		System.out.println("deleted: "+resultD);
+//		System.out.println("++++++++++++++");
+//		
+//		
+//		// SELECT SINGLE OBJECT....	
+//		Student student1 = studentDao.getStudent(458);
+//		System.out.println("single object: "+student1);
+//		System.out.println("++++++++++++++");
+//		
+//		
 		// SELECT MULTIPLE OBJECT...
 		List<Student> students = studentDao.getAllStudents();
 		for(Student s:students) {
