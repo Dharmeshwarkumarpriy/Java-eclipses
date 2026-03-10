@@ -1,0 +1,5 @@
+Configure the "dispatcher servlet" in web.xml
+Create "Spring Configuration" file
+Configure "View Resolver"
+Create Controller
+Create a View to show(Page)
