@@ -61,7 +61,7 @@ public class ContactController {
 //	}
 
 	@RequestMapping(path = "/processform", method = RequestMethod.POST)
-	public String handleForm(@ModelAttribute User user, Model model) {
+	public String handleForm(@ModelAttribute("user") User user, Model model) {
 		System.out.println(user);
 		// process...
 //		model.addAttribute("Header","LearnCodeWith Dharam");
