@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import mvc.model.User;
+
 @Controller
 public class ContactController {
 
@@ -32,10 +34,19 @@ public class ContactController {
 		System.out.println("user name: " + userName);
 		System.out.println("user password: " + userPassword);
 
-		model.addAttribute("name", userName);
-		model.addAttribute("email", userEmail);
-		model.addAttribute("password", userPassword);
+		User user=new User();
+		user.setEmail(userEmail);
+		user.setUserName(userName);
+		user.setPassword(userPassword);
+		
+		System.out.println(user);
+		
+		// process...
+//		model.addAttribute("name", userName);
+//		model.addAttribute("email", userEmail);
+//		model.addAttribute("password", userPassword);
 
+		model.addAttribute("user",user);
 		return "success";
 	}
 

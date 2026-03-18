@@ -8,9 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>welcome, ${name }</h1>
-	<h1>your email address is ${email }</h1>
-	<h1>your password is ${password } try to secure the password</h1>
+<%-- 	<h1>welcome, ${name }</h1> --%>
+<h1>welcome, ${user.userName }</h1>
+
+<%-- 	<h1>your email address is ${email }</h1> --%>
+	<h1>your email address is ${user.email }</h1>
+		
+<%-- 	<h1>your password is ${password } try to secure the password</h1> --%>
+<h1>your password is ${user.password } try to secure the password</h1>
 
 </body>
 </html>
