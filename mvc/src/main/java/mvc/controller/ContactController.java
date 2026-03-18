@@ -14,10 +14,18 @@ import mvc.model.User;
 @Controller
 public class ContactController {
 
+	@ModelAttribute
+	public void commonDataForModel(Model m) {
+		m.addAttribute("Header", "LearnCodeWith Dharam");
+		m.addAttribute("Desc", "Home for Programmer");
+		System.out.println("adding common data to model");
+	}
+
 	@RequestMapping("/contact")
 	public String showForm(Model m) {
-		m.addAttribute("Header","LearnCodeWith Dharam");
-		m.addAttribute("Desc", "Home for Programmer");
+		System.out.println("creating form");
+//		m.addAttribute("Header","LearnCodeWith Dharam");
+//		m.addAttribute("Desc", "Home for Programmer");		
 		return "contact";
 	}
 
@@ -53,15 +61,12 @@ public class ContactController {
 //	}
 
 	@RequestMapping(path = "/processform", method = RequestMethod.POST)
-	public String handleForm(@ModelAttribute User user,  Model model) {
-				
+	public String handleForm(@ModelAttribute User user, Model model) {
 		System.out.println(user);
-		
 		// process...
-		model.addAttribute("Header","LearnCodeWith Dharam");
-		model.addAttribute("Desc", "Home for Programmer");
-		
+//		model.addAttribute("Header","LearnCodeWith Dharam");
+//		model.addAttribute("Desc", "Home for Programmer");//		
 		return "success";
 	}
-	
+
 }
