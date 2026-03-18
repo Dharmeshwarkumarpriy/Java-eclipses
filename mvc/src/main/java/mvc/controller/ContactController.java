@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,8 +15,9 @@ import mvc.model.User;
 public class ContactController {
 
 	@RequestMapping("/contact")
-	public String showForm() {
-
+	public String showForm(Model m) {
+		m.addAttribute("Header","LearnCodeWith Dharam");
+		m.addAttribute("Desc", "Home for Programmer");
 		return "contact";
 	}
 
@@ -27,27 +29,39 @@ public class ContactController {
 //		return "";
 //	}
 
-	@RequestMapping(path = "/processform", method = RequestMethod.POST)
-	public String handleForm(@RequestParam(name = "email", required = true) String userEmail,
-			@RequestParam("userName") String userName, @RequestParam("password") String userPassword, Model model) {
-		System.out.println("user email: " + userEmail);
-		System.out.println("user name: " + userName);
-		System.out.println("user password: " + userPassword);
+//	@RequestMapping(path = "/processform", method = RequestMethod.POST)
+//	public String handleForm(@RequestParam(name = "email", required = true) String userEmail,
+//			@RequestParam("userName") String userName, @RequestParam("password") String userPassword, Model model) {
+//		System.out.println("user email: " + userEmail);
+//		System.out.println("user name: " + userName);
+//		System.out.println("user password: " + userPassword);
+//
+//		User user=new User();
+//		user.setEmail(userEmail);
+//		user.setUserName(userName);
+//		user.setPassword(userPassword);
+//		
+//		System.out.println(user);
+//		
+//		// process...
+////		model.addAttribute("name", userName);
+////		model.addAttribute("email", userEmail);
+////		model.addAttribute("password", userPassword);
+//
+//		model.addAttribute("user",user);
+//		return "success";
+//	}
 
-		User user=new User();
-		user.setEmail(userEmail);
-		user.setUserName(userName);
-		user.setPassword(userPassword);
-		
+	@RequestMapping(path = "/processform", method = RequestMethod.POST)
+	public String handleForm(@ModelAttribute User user,  Model model) {
+				
 		System.out.println(user);
 		
 		// process...
-//		model.addAttribute("name", userName);
-//		model.addAttribute("email", userEmail);
-//		model.addAttribute("password", userPassword);
-
-		model.addAttribute("user",user);
+		model.addAttribute("Header","LearnCodeWith Dharam");
+		model.addAttribute("Desc", "Home for Programmer");
+		
 		return "success";
 	}
-
+	
 }
