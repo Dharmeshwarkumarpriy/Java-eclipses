@@ -8,9 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+ 	
 <h1>${Header }</h1>
 <p>${Desc }</p>
+<h1 style="color: green;">${msg }</h1>
 <hr>
 
 <%-- 	<h1>welcome, ${name }</h1> --%>
