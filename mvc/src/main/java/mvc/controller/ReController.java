@@ -9,18 +9,18 @@ public class ReController {
 
 	@RequestMapping("/one")
 	public RedirectView one() {
-
+		
 		System.out.println("this is one handler");
-		RedirectView redirectView = new RedirectView();
+		RedirectView redirectView =new RedirectView();
 		redirectView.setUrl("two");
 		return redirectView;
 	}
-
+	
 	@RequestMapping("/two")
 	public String two() {
-
+		
 		System.out.println("this is two handler");
 		return "contact";
 	}
-
+	
 }
