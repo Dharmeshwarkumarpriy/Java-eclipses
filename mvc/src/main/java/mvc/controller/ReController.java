@@ -8,16 +8,16 @@ public class ReController {
 
 	@RequestMapping("/one")
 	public String one() {
-
+		
 		System.out.println("this is one handler");
 		return "redirect:/two";
 	}
-
+	
 	@RequestMapping("/two")
 	public String two() {
-
+		
 		System.out.println("this is two handler");
 		return "contact";
 	}
-
+	
 }
