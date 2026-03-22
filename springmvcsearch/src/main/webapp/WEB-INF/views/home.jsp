@@ -18,13 +18,13 @@
 
 	<div class="container">
 
-		<div class="card mx-auto mt-5 bg-primary" style="width: 50%;">
-			<div class="card-body py-5">
+		<div class="card mx-auto mt-4 bg-secondary" style="width: 50%;">
+			<div class="card-body py-4">
 
 				<h3 class="text-center text-white" style="text-transform: uppercase">my
 					Search</h3>
 
-				<form class="mt-3" action="search">
+				<form class="mt-2" action="search">
 
 					<div class="form-group">
 
