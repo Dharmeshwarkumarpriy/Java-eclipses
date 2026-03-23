@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,6 +25,10 @@
 				<div class="card">
 					<div class="card-body">
 						<h3 class="text-center">Complex Form</h3>
+						<div class="alert alert-danger" role="alert">
+						<form:errors path="student.*"/>
+						
+							</div>
 						<form action="handleform" method="post">
 
 							<div class="form-group">
@@ -82,23 +87,25 @@
 								</select>
 
 							</div>
-							
+
 							<div class="card">
-							
-							<div class="card-body">
-							
-							<p>your address</p>
-							
-							<div class="form-group">
-							<input type="text" name="address.street" class="form-control" placeholder="Enter street"/>
-													
-							</div>	
-							<div class="form-group">
-							<input type="text" name="address.city" class="form-control" placeholder="Enter city"/>
-													
-							</div>	
-													
-							</div>							
+
+								<div class="card-body">
+
+									<p>your address</p>
+
+									<div class="form-group">
+										<input type="text" name="address.street" class="form-control"
+											placeholder="Enter street" />
+
+									</div>
+									<div class="form-group">
+										<input type="text" name="address.city" class="form-control"
+											placeholder="Enter city" />
+
+									</div>
+
+								</div>
 							</div>
 							<div class="container text-center">
 								<button type="submit" class="btn-btn-primary">Submit</button>
