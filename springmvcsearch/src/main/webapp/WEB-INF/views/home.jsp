@@ -1,3 +1,13 @@
+<%@page import="java.time.LocalDateTime"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<%@page isELIgnored="false"%>
+
+<!-- serving static files in spring MVC in very simple steps CSS,JS,IMAGES. -->
+
+
+<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,10 +21,15 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
+	
+	<link href="<c:url value="/resources/css/style.css" />">
+	<script src="<c:url value="/resources/js/script.js" />"></script>
 
 <title>Hello, world!</title>
 </head>
 <body>
+
+<img alt="my image" src="<c:url value="/resources/image/nice.jpeg" />">
 
 	<div class="container">
 
