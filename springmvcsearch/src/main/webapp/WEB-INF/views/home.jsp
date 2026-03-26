@@ -7,7 +7,8 @@
 <!-- serving static files in spring MVC in very simple steps CSS,JS,IMAGES. -->
 
 
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@
 </head>
 <body>
 
-<img alt="my image" src="<c:url value="/resources/image/nice.jpeg" />">
+<img alt="my image" src="<c:url value="/resources/image/02g.png" />">
 
 	<div class="container">
 
