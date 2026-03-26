@@ -33,6 +33,8 @@
 <img alt="my image" src="<c:url value="/resources/image/02g.png" />">
 
 	<div class="container">
+	
+	<h1 class="text-center m-4">This is my home page</h1>
 
 		<div class="card mx-auto mt-4 bg-secondary" style="width: 50%;">
 			<div class="card-body py-4">
