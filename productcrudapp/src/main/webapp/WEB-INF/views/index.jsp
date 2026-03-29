@@ -33,10 +33,19 @@
 								<td>${p.name }</td>
 								<td>${p.description }</td>
 								<td class="font.weight-bold">&#x20B9; ${p.price }</td>
-								<td><a href="delete/${p.id }"><i
-										class="fa-regular fa-trash-can text-danger"
-										style="font-size: 30px"></i></a></td>
+								<td>
+								<a href="delete/${p.id }">
+								<i class="fa-regular fa-trash-can text-danger"
+										style="font-size: 30px"></i></a>
+								<a href="update/${p.id }">
+								<i class="fa-regular fa-pen-to-square text-primary"
+								style="font-size: 30px"></i></a>
+										
+								</td>
+							
 							</tr>
+							
+							
 
 						</c:forEach>
 					</tbody>
