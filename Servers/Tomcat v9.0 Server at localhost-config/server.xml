@@ -162,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="mvc" path="/mvc" reloadable="true" source="org.eclipse.jst.j2ee.server:mvc"/><Context docBase="springmvcsearch" path="/springmvcsearch" reloadable="true" source="org.eclipse.jst.j2ee.server:springmvcsearch"/><Context docBase="ecommerce" path="/ecommerce" reloadable="true" source="org.eclipse.jst.j2ee.server:ecommerce"/><Context docBase="productcrudapp" path="/productcrudapp" reloadable="true" source="org.eclipse.jst.j2ee.server:productcrudapp"/></Host>
+      <Context docBase="mvc" path="/mvc" reloadable="true" source="org.eclipse.jst.j2ee.server:mvc"/><Context docBase="springmvcsearch" path="/springmvcsearch" reloadable="true" source="org.eclipse.jst.j2ee.server:springmvcsearch"/><Context docBase="ecommerce" path="/ecommerce" reloadable="true" source="org.eclipse.jst.j2ee.server:ecommerce"/><Context docBase="productcrudapp" path="/productcrudapp" reloadable="true" source="org.eclipse.jst.j2ee.server:productcrudapp"/><Context docBase="ToDoApp" path="/ToDoApp" reloadable="true" source="org.eclipse.jst.j2ee.server:ToDoApp"/></Host>
     </Engine>
   </Service>
 </Server>
