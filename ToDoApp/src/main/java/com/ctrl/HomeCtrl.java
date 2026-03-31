@@ -20,21 +20,22 @@ public class HomeCtrl {
 
 	@Autowired
 	ServletContext context;
-	
+
 	@Autowired
 	TodoDao todoDao;
-	
+
 	@RequestMapping("/home")
 	public String home(Model m) {
 
 //		String str="Priy Dharmy";
 //		m.addAttribute("name",str);
-
 		String str = "home";
 		m.addAttribute("page", str);
-		//List<Todo> list = (List<Todo>) context.getAttribute("list");
+
+		// List<Todo> list = (List<Todo>) context.getAttribute("list");
 		List<Todo> list = this.todoDao.getAll();
-		m.addAttribute("todos",list);
+
+		m.addAttribute("todos", list);
 		return "home";
 	}
 
@@ -50,12 +51,12 @@ public class HomeCtrl {
 	public String save(@ModelAttribute("todo") Todo t, Model m) {
 		System.out.println(t);
 		t.setTodoDate(new Date());
-						
+
 		// get the todo list form context...
 		// List<Todo> list = (List<Todo>) context.getAttribute("list");
 		// list.add(t);
-		
 		this.todoDao.save(t);
+
 		m.addAttribute("msg", "successfully added..");
 		return "home";
 	}
